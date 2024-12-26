@@ -1,6 +1,7 @@
 "use client";
 
-import { Text, Img, Button } from "@react-email/components";
+import { cn } from "@/lib/utils";
+import { Text, Img, Button,Section } from "@react-email/components";
 import { forwardRef, ReactNode } from "react";
 import { useDrag } from "react-dnd";
 
@@ -14,6 +15,7 @@ const componentsList: ComponentListType[] = [
   { id: "text", name: "Text", component: <Text>Sample Text</Text> },
   { id: "button", name: "Button", component: <Button>Click Me</Button> },
   { id: "image", name: "Image", component: <Img src="" alt="Placeholder Image" /> },
+  // { id: "section", name: "section", component: <Section className={cn("p-6 bg-white h-[400px] w-[200px]")}></Section> },
 ];
 
 interface DraggableComponentProps {
